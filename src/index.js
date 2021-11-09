@@ -1,13 +1,22 @@
-import _ from 'lodash';
 import './style.css';
+import {
+  addScore, createScore, resetInput, getDisplay,
+} from './functions';
 
-function component() {
-    const element = document.createElement('div');
+const submit = document.querySelector('.subBtn');
+const name = document.querySelector('.name');
+const score = document.querySelector('.score');
 
-    // Lodash, now imported by this script
-    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
+submit.addEventListener('click', (e) => {
+  e.preventDefault();
 
-    return element;
-}
+  const newScore = addScore(
+    name.value,
+    score.value,
+  );
 
-document.body.appendChild(component());
+  createScore(newScore);
+  resetInput();
+});
+
+getDisplay();
