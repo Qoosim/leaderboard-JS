@@ -1,4 +1,17 @@
-body {
-    background-color: bisque;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+::placeholder {
+  font-style: italic;
+}
+
+.custom-row {
+  margin: 0 !important;
+}
+
+.custom-row:nth-child(even) {
+  background: #c3c3c3;
+}
