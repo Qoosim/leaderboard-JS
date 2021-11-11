@@ -1,22 +1,23 @@
 import './style.css';
 import {
-  addScore, createScore, resetInput, getDisplay,
+  createGame, createScores, getPosts, resetInput,
 } from './functions';
 
 const submit = document.querySelector('.subBtn');
-const name = document.querySelector('.name');
-const score = document.querySelector('.score');
+const refBtn = document.querySelector('.refBtn');
 
 submit.addEventListener('click', (e) => {
   e.preventDefault();
-
-  const newScore = addScore(
-    name.value,
-    score.value,
-  );
-
-  createScore(newScore);
+  createScores();
   resetInput();
 });
 
-getDisplay();
+refBtn.addEventListener('click', () => {
+  getPosts();
+});
+
+if (localStorage.getItem('data')) {
+  localStorage.getItem('data');
+} else {
+  createGame();
+}
