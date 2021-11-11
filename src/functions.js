@@ -17,7 +17,7 @@ const createGame = async () => {
     .catch((error) => `Error: ${error}`);
 };
 
-const createUser = async () => {
+const createScores = async () => {
   const id = JSON.parse(localStorage.getItem('data'));
   await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${id}/scores`, {
     method: 'POST',
@@ -54,5 +54,5 @@ const getPosts = async () => {
 };
 
 export {
-  createGame, createUser, getPosts, resetInput,
+  createGame, createScores, getPosts, resetInput,
 };
