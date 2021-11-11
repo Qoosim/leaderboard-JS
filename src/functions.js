@@ -1,19 +1,37 @@
-const scores = [];
-
-const addScore = (name, score) => {
-  scores.push({ name, score });
-  return { name, score };
+const createGame = async () => {
+  const url = 'https://us-central1-js-capstone-backend.cloudfunctions.net/api/games';
+  await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify({
+      name: 'AyoGame',
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      const myData = data.result.split(' ')[3];
+      localStorage.setItem('data', JSON.stringify(myData));
+    })
+    .catch((error) => `Error: ${error}`);
 };
 
-const createScore = ({ name, score }) => {
-  const h4 = document.createElement('h4');
-  h4.classList.add('custom-row', 'p-1');
-  h4.textContent = `${name}: ${score}`;
-  document.querySelector('.display').appendChild(h4);
-};
-
-const getDisplay = () => {
-  scores.forEach(createScore);
+const createScores = async () => {
+  const id = JSON.parse(localStorage.getItem('data'));
+  await fetch(`https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${id}/scores`, {
+    method: 'POST',
+    headers: {
+      'Content-type': 'application/json',
+    },
+    body: JSON.stringify({
+      user: document.querySelector('.name').value,
+      score: document.querySelector('.score').value,
+    }),
+  })
+    .then((response) => response.json())
+    .then((data) => data)
+    .catch((error) => `Error: ${error}`);
 };
 
 const resetInput = () => {
@@ -22,6 +40,19 @@ const resetInput = () => {
   document.querySelector('.name').focus();
 };
 
+const getPosts = async () => {
+  const id = JSON.parse(localStorage.getItem('data'));
+  const url = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${id}/scores`;
+  const data = await fetch(url).then((response) => response.json()).catch((error) => `Error: ${error}`);
+  document.querySelector('.display').innerHTML = '';
+  data.result.forEach((post) => {
+    const h4 = document.createElement('h4');
+    h4.classList.add('custom-row', 'p-1');
+    h4.textContent = `${post.user}: ${post.score}`;
+    document.querySelector('.display').appendChild(h4);
+  });
+};
+
 export {
-  addScore, createScore, resetInput, getDisplay,
+  createGame, createScores, getPosts, resetInput,
 };
