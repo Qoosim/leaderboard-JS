@@ -4,30 +4,37 @@
 
 ![screenshot](./src/images/final-touch.jpeg)
 
-## Built with
+## ⚒️  Built with
 - Html
 - Css
 - JavaScript
 
-## Frameworks and Technologies used
+## 🎞️ Frameworks and Technologies used
 - Bootstrap
 - Webpack
 - HTML
 - CSS
 - JAVASCRIPT
 
-## Getting Started
+## Live Demo
+![Demo](https://raw.githack.com/Qoosim/leaderboard-JS/feature/final-touch/src/index.html):left_point:
+
+## 🖥️ Getting Started
 To get a local version up and running on your machine, follow these simple example steps.
 
-## Prerequisites
-   - Install Node.js on your machine
+## 🛠️ Prerequisites
+```
+  Install Node.js on your machine
+```
 
-## Setup
-   - Clone the repository on your machine and cd into it
-   - run npm install
-   - run npm run start
+## 🕹️ Setup
+```
+  Clone the repository on your machine and cd into it
+  run npm install
+  run npm run start
+```
 
-## Author
+## 👨‍💻 Author
 
 👤 **Qoosim AbdulGhaniyy**
 
@@ -40,11 +47,11 @@ Contributions, issues, and feature requests are welcome!
 
 Feel free to check the [issues page](../../issues/).
 
-## Show your support
+## 📦 Show your support
 
 Give a ⭐️ if you like this project!
 
-## Acknowledgments
+## 👏 Acknowledgments
 
 - Hat tip to anyone whose code was used
 - Inspiration
