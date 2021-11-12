@@ -1,11 +1,31 @@
 # Leaderboard-JS 
 
-> This leaderboard website displays scores submitted by different players. It also allows you to submit your score. All data is preserved thanks to the external Leaderboard API service. 
+> Leaderboard is a project that was designed by Microverse to practice how to handle APIs and the proper usage of ES6 syntax. 
 
-![screenshot](./src/images/hit-the-api.jpeg)
+![screenshot](./src/images/final-touch.jpeg)
+
+## Built with
+- Html
+- Css
+- JavaScript
+
+## Frameworks and Technologies used
+- Bootstrap
+- Webpack
+- HTML
+- CSS
+- JAVASCRIPT
 
 ## Getting Started
+To get a local version up and running on your machine, follow these simple example steps.
 
+## Prerequisites
+   - Install Node.js on your machine
+
+## Setup
+   - Clone the repository on your machine and cd into it
+   - run npm install
+   - run npm run start
 
 ## Author
 
