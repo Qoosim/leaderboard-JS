@@ -45,11 +45,14 @@ const getPosts = async () => {
   const url = `https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/${id}/scores`;
   const data = await fetch(url).then((response) => response.json()).catch((error) => `Error: ${error}`);
   document.querySelector('.display').innerHTML = '';
+  const div = document.createElement('div');
+  div.classList.add('border', 'border-1', 'border-dark', 'rounded');
   data.result.forEach((post) => {
     const h4 = document.createElement('h4');
     h4.classList.add('custom-row', 'p-1');
     h4.textContent = `${post.user}: ${post.score}`;
-    document.querySelector('.display').appendChild(h4);
+    div.appendChild(h4);
+    document.querySelector('.display').appendChild(div);
   });
 };
 
