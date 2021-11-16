@@ -4,6 +4,36 @@
   box-sizing: border-box;
 }
 
+body {
+  background: rgba(62, 181, 238, 0.2);
+}
+
+main {
+  background: rgba(2, 50, 64, 0.8);
+  border-radius: 10px;
+  padding: 2%;
+}
+
+h1,
+h2,
+h3 {
+  color: #fbceb1;
+}
+
+.subBtn,
+.refBtn {
+  background: #1a4314;
+  color: #fff;
+  font-size: 1.2rem;
+  font-style: italic;
+  font-weight: bolder;
+}
+
+.subBtn:hover,
+.refBtn:hover {
+  background: rgba(238, 188, 62, 0.8);
+}
+
 ::placeholder {
   font-style: italic;
 }
@@ -13,5 +43,11 @@
 }
 
 .custom-row:nth-child(even) {
-  background: #c3c3c3;
+  background: #fff;
+  color: rgba(2, 50, 64);
+}
+
+.custom-row:nth-child(odd) {
+  background: rgba(20, 50, 64, 0.2);
+  color: #fff;
 }
