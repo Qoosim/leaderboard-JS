@@ -9,11 +9,42 @@
           crossorigin="anonymous">
   <script defer src="main.js"></script></head>
   <body>
-    <main class="container">
-      <h1>Leaderboard</h1>
-      <div class="row justify-content-sm-center bg-secondary">
-        <div class="col col-lg-8">1 0f 8</div>
-        <div class="col-md-auto">form content</div>
+    <main class="container w-75 mx-auto mt-5">
+      <h4 id="success"></h4>
+      <h1 class="mb-4">Leaderboard</h1>
+      <div class="row">
+        <div class="col col-lg-7">
+          <div class="row mb-4">
+            <div class="col col-lg-12 d-flex justify-content-between align-items-center">
+              <h3>Recent Scores</h3>
+              <button class="btn refBtn">Refresh</button>
+            </div>
+          </div>
+          <div class="row">
+            <div class="display"></div>
+          </div>
+        </div>
+        <div class="col col-lg-1"></div>
+        <div class="col-md-auto">
+          <form autocomplete="off">
+            <h2 class="mb-4">Add your score</h2>
+            <input 
+              class="form-control mb-4 name" 
+              type="text" 
+              name="name" 
+              id="name" 
+              placeholder="Your name" 
+              required>
+            <input 
+              class="form-control mb-4 score" 
+              type="number" 
+              name="score" 
+              id="score" 
+              placeholder="Your score" 
+              required>
+            <button class="btn float-end subBtn">Submit</button>
+          </form>
+        </div>
       </div>
     </main>
   </body>
