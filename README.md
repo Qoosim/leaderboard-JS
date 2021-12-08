@@ -17,7 +17,7 @@
 - JAVASCRIPT
 
 ## 🖥️ Live Demo
-[Demo](https://raw.githack.com/Qoosim/leaderboard-JS/feature/final-touch/src/index.html):point_left:
+[Demo](https://leaderboard-js.netlify.app/):point_left:
 
 ## 🖥️ Getting Started
 To get a local version up and running on your machine, follow these simple example steps.
